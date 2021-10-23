@@ -1491,6 +1491,8 @@ GameObject:
   - component: {fileID: 1401903289}
   - component: {fileID: 1401903290}
   - component: {fileID: 1401903291}
+  - component: {fileID: 1401903292}
+  - component: {fileID: 1401903293}
   m_Layer: 0
   m_Name: Layer_0001_8
   m_TagString: Untagged
@@ -1579,6 +1581,53 @@ MonoBehaviour:
   horizontalSpeed: 5
   horizontalBoundary: 15
   resetPosZ: -1
+--- !u!61 &1401903292
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401903288}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -3.49}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 9.28, y: 7.93}
+    newSize: {x: 9.28, y: 7.93}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 9.28, y: 0.27}
+  m_EdgeRadius: 0
+--- !u!50 &1401903293
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401903288}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1442513444
 GameObject:
   m_ObjectHideFlags: 0
@@ -3162,12 +3211,24 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4812287437208301358, guid: d6b67072a5654604f809ef02d4757475, type: 3}
+      propertyPath: m_Mass
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062981697507249727, guid: d6b67072a5654604f809ef02d4757475, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1741638469}
     - target: {fileID: 6731175506291427936, guid: d6b67072a5654604f809ef02d4757475, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6731175506291427936, guid: d6b67072a5654604f809ef02d4757475, type: 3}
       propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6731175506291427937, guid: d6b67072a5654604f809ef02d4757475, type: 3}
+      propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6731175506291427937, guid: d6b67072a5654604f809ef02d4757475, type: 3}
