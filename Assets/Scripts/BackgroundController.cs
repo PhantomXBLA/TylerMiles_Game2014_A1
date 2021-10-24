@@ -25,7 +25,7 @@ public class BackgroundController : MonoBehaviour
         _Move();
         _CheckBounds();
 
-        if (horizontalSpeed < 45)
+        if (horizontalSpeed < 30)
         {
             horizontalSpeed += Time.deltaTime;
             Debug.Log(horizontalSpeed);

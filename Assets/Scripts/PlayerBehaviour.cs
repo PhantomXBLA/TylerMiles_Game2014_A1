@@ -30,6 +30,8 @@ public class PlayerBehaviour : MonoBehaviour
     public AudioSource jumpSound;
     public AudioSource landSound;
 
+    public Button shootbutton;
+
 
     Vector2 jumpForce = new Vector2(0, 1000);
     // Start is called before the first frame update
@@ -57,6 +59,7 @@ public class PlayerBehaviour : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         canSlide = true;
         canJump = true;
+        
     }
 
     void slide()
