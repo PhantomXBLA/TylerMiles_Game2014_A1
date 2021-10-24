@@ -23,10 +23,13 @@ public class PlayerBehaviour : MonoBehaviour
     float score;
     float speedMultiplier;
 
-   public TextMeshProUGUI scoreLabel;
-   public GameObject ground;
+    public TextMeshProUGUI scoreLabel;
+    public GameObject ground;
 
-    
+    public AudioSource coinPickup;
+    public AudioSource jumpSound;
+    public AudioSource landSound;
+
 
     Vector2 jumpForce = new Vector2(0, 1000);
     // Start is called before the first frame update
@@ -41,6 +44,7 @@ public class PlayerBehaviour : MonoBehaviour
         if (isGrounded)
         {
             isGrounded = false;
+            jumpSound.Play();
             animator.SetBool("isGrounded", false);
             body.AddForce(jumpForce);
             animator.SetTrigger("JumpTrigger");
@@ -68,7 +72,12 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if(collision.gameObject.tag == "ground")
         {
+            if(isGrounded == false){
+                landSound.Play();
+            }
+
             isGrounded = true;
+            
             animator.SetBool("isGrounded", true);
         }
     }
@@ -78,6 +87,13 @@ public class PlayerBehaviour : MonoBehaviour
         if(collision.gameObject.tag == "enemy")
         {
             lives--;
+        }
+
+        if(collision.gameObject.tag == "pickup")
+        {
+            score += 250;
+            coinPickup.Play();
+            Destroy(collision.gameObject);
         }
     }
 
