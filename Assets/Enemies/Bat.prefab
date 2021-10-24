@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 5399946145744138392}
   - component: {fileID: 8332364747645956508}
   - component: {fileID: 1711811567059186408}
+  - component: {fileID: 8328399673695539163}
   m_Layer: 0
   m_Name: Bat
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1739855279
-  m_SortingLayer: 4
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 2129064536425567803, guid: 7ed81a386e68c2b41a67842ba96a92a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -119,3 +120,29 @@ MonoBehaviour:
   bat: {fileID: 7576062871893365717}
   horizontalSpeed: 1.5
   horizontalBoundary: 15
+--- !u!61 &8328399673695539163
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7576062871893365717}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.25, y: 0.16}
+    newSize: {x: 0.33, y: 0.11}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.22, y: 0.13}
+  m_EdgeRadius: 0

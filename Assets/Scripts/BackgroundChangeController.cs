@@ -25,7 +25,7 @@ public class BackgroundChangeController : MonoBehaviour
     void Update()
     {
         scrollSpeed = GreenBackground.gameObject.GetComponentInChildren<BackgroundController>().horizontalSpeed;
-        Debug.Log(scrollSpeed);
+        //Debug.Log(scrollSpeed);
         if(scrollSpeed >= 25 && canChange == true)
         {
             RedBackground.SetActive(true);

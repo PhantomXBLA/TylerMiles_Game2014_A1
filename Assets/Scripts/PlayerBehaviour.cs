@@ -19,18 +19,22 @@ public class PlayerBehaviour : MonoBehaviour
     bool canSlide = true;
     bool canJump = true;
 
+    bool sliding = false;
+
     public float lives;
     float score;
     float speedMultiplier;
 
     public TextMeshProUGUI scoreLabel;
+    public TextMeshProUGUI livesLabel;
+
     public GameObject ground;
 
     public AudioSource coinPickup;
     public AudioSource jumpSound;
     public AudioSource landSound;
-
-    public Button shootbutton;
+    public AudioSource deathSound;
+    public AudioSource hitSound;
 
 
     Vector2 jumpForce = new Vector2(0, 1000);
@@ -56,7 +60,9 @@ public class PlayerBehaviour : MonoBehaviour
 
     IEnumerator slideCooldown()
     {
+        
         yield return new WaitForSeconds(0.5f);
+        sliding = false;
         canSlide = true;
         canJump = true;
         
@@ -64,6 +70,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     void slide()
     {
+        sliding = true;
         animator.SetTrigger("SlideTrigger");
         Debug.Log("slide initiated");
         canSlide = false;
@@ -87,12 +94,19 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "enemy")
+        if (collision.gameObject.tag == "enemy" && sliding == false)
         {
             lives--;
+            deathSound.Play();
         }
 
-        if(collision.gameObject.tag == "pickup")
+        if (collision.gameObject.tag == "enemy" && sliding == true)
+        {
+            Destroy(collision.gameObject);
+            hitSound.Play();
+        }
+
+        if (collision.gameObject.tag == "pickup")
         {
             score += 250;
             coinPickup.Play();
@@ -106,6 +120,8 @@ public class PlayerBehaviour : MonoBehaviour
     {
         speedMultiplier = ground.GetComponent<BackgroundController>().horizontalSpeed;
         scoreLabel.text = "Score: " + score.ToString("f0");
+        livesLabel.text = "Lives: " + lives.ToString("f0");
+
         score += (Time.deltaTime*speedMultiplier);
         //Debug.Log(touchStart);
 

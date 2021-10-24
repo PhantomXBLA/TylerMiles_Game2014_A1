@@ -11,20 +11,28 @@ public class WolfBehavior : MonoBehaviour
     public float horizontalBoundary;
 
     public GameObject wolf;
+    public float tempSpeed;
 
     void Start()
     {
-        
+        horizontalSpeed = tempSpeed;
     }
 
     void Update()
     {
         _Move();
         _CheckBounds();
+
+        if (horizontalSpeed < 30)
+        {
+            horizontalSpeed += (Time.deltaTime);
+            Debug.Log(horizontalSpeed);
+        }
     }
 
     private void _Reset()
     {
+        tempSpeed = horizontalSpeed;
         Destroy(wolf);
     }
 
