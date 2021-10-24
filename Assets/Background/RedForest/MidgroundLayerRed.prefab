@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d6b150b3ba04c14989ba1add62f46ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalSpeed: 1.5
+  horizontalSpeed: 22.5
   horizontalBoundaryLeft: -11.88
   horizontalBoundaryRight: 35.5
   resetPosZ: 0

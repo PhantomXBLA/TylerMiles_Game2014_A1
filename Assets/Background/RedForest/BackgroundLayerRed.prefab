@@ -128,9 +128,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d6b150b3ba04c14989ba1add62f46ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalSpeed: 0.5
+  horizontalSpeed: 21.5
   horizontalBoundaryLeft: -10.71
-  horizontalBoundaryRight: 34.65
+  horizontalBoundaryRight: 34.6
   resetPosZ: 0
   scrollingPrefab: {fileID: 5136002188719518680}
 --- !u!1 &5136002188957094919

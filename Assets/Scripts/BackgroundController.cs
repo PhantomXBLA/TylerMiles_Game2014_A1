@@ -28,7 +28,7 @@ public class BackgroundController : MonoBehaviour
         if (horizontalSpeed < 30)
         {
             horizontalSpeed += Time.deltaTime;
-            Debug.Log(horizontalSpeed);
+            //Debug.Log(horizontalSpeed);
         }
     }
 
