@@ -43,6 +43,8 @@ public class PlayerBehaviour : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
+
+        Application.targetFrameRate = 60; // From Unity Documentation
     }
 
     void jump()
