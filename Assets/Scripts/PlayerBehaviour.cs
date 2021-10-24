@@ -18,6 +18,8 @@ public class PlayerBehaviour : MonoBehaviour
     bool isGrounded = true;
     bool canSlide = true;
 
+    float lives;
+
     
 
     Vector2 jumpForce = new Vector2(0, 1000);

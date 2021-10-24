@@ -6,8 +6,11 @@ public class BackgroundController : MonoBehaviour
 {
 
     public float horizontalSpeed;
-    public float horizontalBoundary;
+    public float horizontalBoundaryLeft;
+    public float horizontalBoundaryRight;
     public float resetPosZ;
+
+    public GameObject GroundPrefab;
 
 
     // Start is called before the first frame update
@@ -25,18 +28,18 @@ public class BackgroundController : MonoBehaviour
 
     private void _Reset()
     {
-        transform.position = new Vector3(horizontalBoundary, transform.position.y, resetPosZ);
+        this.GroundPrefab.transform.position = new Vector3(horizontalBoundaryRight, GroundPrefab.transform.position.y, resetPosZ);
     }
 
     private void _Move()
     {
-        transform.position -= new Vector3(horizontalSpeed, 0.0f) * Time.deltaTime;
+        GroundPrefab.transform.position -= new Vector3(horizontalSpeed, 0.0f) * Time.deltaTime;
     }
 
     private void _CheckBounds()
     {
 
-        if (transform.position.x <= -horizontalBoundary)
+        if (GroundPrefab.transform.position.x <= horizontalBoundaryLeft)
         {
             _Reset();
         }
