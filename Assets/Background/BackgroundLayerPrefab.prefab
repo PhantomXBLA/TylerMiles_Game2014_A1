@@ -176,6 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 169834632908500367}
   - component: {fileID: 169834632908500364}
+  - component: {fileID: 3717599521992507377}
   m_Layer: 0
   m_Name: BackgroundLayerPrefab
   m_TagString: Untagged
@@ -190,7 +191,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 169834632908500366}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11.85, y: -5.11, z: 0}
   m_LocalScale: {x: 2.5566, y: 2.5566, z: 1}
   m_Children:
@@ -251,3 +252,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3717599521992507377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169834632908500366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d6b150b3ba04c14989ba1add62f46ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalSpeed: 2
+  horizontalBoundaryLeft: -10.58
+  horizontalBoundaryRight: 34.65
+  resetPosZ: 0
+  GroundPrefab: {fileID: 0}

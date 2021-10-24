@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -10,15 +12,19 @@ public class PlayerBehaviour : MonoBehaviour
     Rigidbody2D body;
     Animator animator;
 
-    private Vector3 m_touchesEnded;
-
     Vector2 direction;
     Vector2 touchStart;
 
     bool isGrounded = true;
     bool canSlide = true;
+    bool canJump = true;
 
-    float lives;
+    public float lives;
+    float score;
+    float speedMultiplier;
+
+   public TextMeshProUGUI scoreLabel;
+   public GameObject ground;
 
     
 
@@ -28,12 +34,6 @@ public class PlayerBehaviour : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
-    }
-
-    void JumpOrSlide()
-    {
-        
-      
     }
 
     void jump()
@@ -52,6 +52,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         canSlide = true;
+        canJump = true;
     }
 
     void slide()
@@ -59,6 +60,7 @@ public class PlayerBehaviour : MonoBehaviour
         animator.SetTrigger("SlideTrigger");
         Debug.Log("slide initiated");
         canSlide = false;
+        canJump = false;
         StartCoroutine(slideCooldown());
     }
 
@@ -71,18 +73,13 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "ground")
-        {
-            isGrounded = false;
-            
-        }
-    }
 
     // Update is called once per frame
     void Update()
     {
+        speedMultiplier = ground.GetComponent<BackgroundController>().horizontalSpeed;
+        scoreLabel.text = "Score: " + score.ToString("f0");
+        score += (Time.deltaTime*speedMultiplier);
         //Debug.Log(touchStart);
 
         if (Input.touchCount > 0)
@@ -92,10 +89,6 @@ public class PlayerBehaviour : MonoBehaviour
             switch (touch.phase)
             {
                 case TouchPhase.Began:
-                    //body.AddForce(jumpForce);
-                    //animator.SetTrigger("JumpTrigger");
-                    //Debug.Log("screen pressed");
-
                     touchStart = touch.position;
 
                     break;
@@ -103,7 +96,7 @@ public class PlayerBehaviour : MonoBehaviour
                 case TouchPhase.Moved:
                     direction = touch.position - touchStart;
 
-                    if(direction.y > touchStart.y && isGrounded)
+                    if(direction.y > 150 && isGrounded && canJump)
                     {
                         jump();
 
@@ -118,10 +111,10 @@ public class PlayerBehaviour : MonoBehaviour
                     break;
 
                 case TouchPhase.Ended:
-                    //Debug.Log("nothing is touching the screen big man");
-                    //touchStart = Vector2.zero;
-                    //touch.position = Vector2.zero;
-                    //direction = Vector2.zero;
+                    Debug.Log("nothing is touching the screen big man");
+                    touchStart = Vector2.zero;
+                    touch.position = Vector2.zero;
+                    direction = Vector2.zero;
                    
                     break;
 
