@@ -118,8 +118,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bat: {fileID: 7576062871893365717}
-  horizontalSpeed: 1.5
+  horizontalSpeed: 3
   horizontalBoundary: 15
+  verticalBoundaryTop: 0.5
+  verticalBoundaryBottom: -2.5
 --- !u!61 &8328399673695539163
 BoxCollider2D:
   m_ObjectHideFlags: 0

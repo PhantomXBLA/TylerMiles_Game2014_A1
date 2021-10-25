@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "emulator-5574",
         "name": "com.DefaultCompany.com.unity.template.mobile2D",
-        "processId": 4274,
+        "processId": 3923,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -42,6 +42,12 @@
             "deviceId": "emulator-5574",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 4274,
+            "exited": false
+        },
+        {
+            "deviceId": "emulator-5574",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 3923,
             "exited": false
         }
     ],

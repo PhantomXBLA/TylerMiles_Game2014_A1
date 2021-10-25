@@ -9,11 +9,16 @@ public class PauseButtonBehaviour : MonoBehaviour
 
     [SerializeField]
     GameObject PauseMenu;
+
+    public AudioSource pauseSFX;
     public void OnPauseButtonPressed()
     {
         //Debug.Log("Button Tapped!");
         //SceneManager.LoadScene(2);
 
+
         PauseMenu.SetActive(!PauseMenu.activeSelf);
+        pauseSFX.Play();
+
     }
 }

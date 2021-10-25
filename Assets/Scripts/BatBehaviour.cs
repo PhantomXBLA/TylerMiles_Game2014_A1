@@ -8,6 +8,10 @@ public class BatBehaviour : MonoBehaviour
     public float horizontalSpeed;
     public float horizontalBoundary;
 
+    public float verticalBoundaryTop;
+    public float verticalBoundaryBottom;
+
+    float direction = 1;
     void Start()
     {
 
@@ -26,8 +30,8 @@ public class BatBehaviour : MonoBehaviour
 
     private void _Move()
     {
-        transform.position -= new Vector3(horizontalSpeed, 0.0f) * Time.deltaTime;
-    }
+        transform.position -= new Vector3(horizontalSpeed, horizontalSpeed*direction) * Time.deltaTime;
+    } 
 
     private void _CheckBounds()
     {
@@ -35,6 +39,17 @@ public class BatBehaviour : MonoBehaviour
         if (transform.position.x <= -horizontalBoundary)
         {
             _Reset();
+        }
+
+        if (transform.position.y >= verticalBoundaryTop)
+        {
+            direction = 1.0f;
+        }
+
+        // check bottom boundary
+        if (transform.position.y <= verticalBoundaryBottom)
+        {
+            direction = -1.0f;
         }
     }
 }

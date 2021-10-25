@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -44,7 +45,7 @@ public class PlayerBehaviour : MonoBehaviour
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
 
-        Application.targetFrameRate = 60; // From Unity Documentation
+        Application.targetFrameRate = 60; // From Unity Documentation -> Sets frame rate on mobile devices (or emulators) to 60
     }
 
     void jump()
@@ -120,6 +121,12 @@ public class PlayerBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if(lives == 0)
+        {
+            SceneManager.LoadScene(3);
+        }
+
         speedMultiplier = ground.GetComponent<BackgroundController>().horizontalSpeed;
         scoreLabel.text = "Score: " + score.ToString("f0");
         livesLabel.text = "Lives: " + lives.ToString("f0");
@@ -139,7 +146,7 @@ public class PlayerBehaviour : MonoBehaviour
                     break;
 
                 case TouchPhase.Moved:
-                    direction = touch.position - touchStart;
+                    direction = touch.position - touchStart; //From Unity Documentation -> Gets distance of swipe from original touch position which can determine which way the player swiped
 
                     if(direction.y > 150 && isGrounded && canJump)
                     {
