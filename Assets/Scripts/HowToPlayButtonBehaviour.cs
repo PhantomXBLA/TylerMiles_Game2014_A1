@@ -8,6 +8,7 @@ Full Name:        Tyler Miles
 Student ID:       101251005
 File:             HowToPlayButtonBehaviour.cs
 Description:      This is the how to play button behaviour script that loads the how to play scene
+Date last modified: Oct 24, 2021
 Revision history: added sound effects
 */
 public class HowToPlayButtonBehaviour : MonoBehaviour

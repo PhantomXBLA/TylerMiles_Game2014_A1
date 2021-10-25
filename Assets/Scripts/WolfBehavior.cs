@@ -7,6 +7,7 @@ Full Name:        Tyler Miles
 Student ID:       101251005
 File:             WolfBehaviour.cs
 Description:      This is the wolf behaviour script that moves the wolf from right to left and will despawn the wolf once it goes off screen.
+Date last modified: Oct 24, 2021
 Revision history: Allowed the bat to move from right to left then later added ability to increase speed the closer it gets to player.
 */
 

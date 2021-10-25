@@ -7,6 +7,7 @@ Full Name:        Tyler Miles
 Student ID:       101251005
 File:             CoinBehaviour.cs
 Description:      This is the coin behaviour script that allows the coin to move from right to left and despawns it when it goes off screen.
+Date last modified: Oct 24, 2021
 Revision history: added the ability for the coin to move from right to left and despawns it when it goes off screen.
 */
 

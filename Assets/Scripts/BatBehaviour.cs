@@ -7,6 +7,7 @@ Full Name:        Tyler Miles
 Student ID:       101251005
 File:             BatBehaviour.cs
 Description:      This is the bat behaviour script that moves the bat from right to left, and up and down, will despawn the bat once it goes off screen.
+Date last modified: Oct 24, 2021
 Revision history: Allowed the bat to move from right to left then later added ability to move up and down.
 */
 

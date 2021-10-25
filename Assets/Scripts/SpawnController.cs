@@ -7,6 +7,7 @@ Full Name:        Tyler Miles
 Student ID:       101251005
 File:             SpawnController.cs
 Description:      This is the object that is responsible for spawning in enemies and power ups at random intervals within a range
+Date last modified: Oct 24, 2021
 Revision history: had the object spawn enemies with a range of different times, then added the coin to those spawning intervals.
 */
 

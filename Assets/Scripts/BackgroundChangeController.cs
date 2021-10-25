@@ -8,6 +8,7 @@ Full Name:        Tyler Miles
 Student ID:       101251005
 File:             BackgroundChangeController.cs
 Description:      This is the background change controller script that checks the speed of the background then changes it to the other background once a certain speed threshold is reached
+Date last modified: Oct 24, 2021
 Revision history: Created the speed check to swap background then added sound effect.
 */
 
