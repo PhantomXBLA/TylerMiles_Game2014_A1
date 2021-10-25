@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-//Pause Button, Tyler Miles, 10251005, Last Modified 03-Oct-2021, Pause  Game When Pressed
+/*
+Full Name:        Tyler Miles
+Student ID:       101251005
+File:             PauseButtonBehaviour.cs
+Description:      This is the pause button behaviour script that loads pause menu
+Revision history: added sound effects
+*/
 public class PauseButtonBehaviour : MonoBehaviour
 {
 

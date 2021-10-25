@@ -2,6 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/*
+Full Name:        Tyler Miles
+Student ID:       101251005
+File:             BackgroundChangeController.cs
+Description:      This is the background change controller script that checks the speed of the background then changes it to the other background once a certain speed threshold is reached
+Revision history: Created the speed check to swap background then added sound effect.
+*/
+
+
 public class BackgroundChangeController : MonoBehaviour
 {
 

@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-//StartButton, Tyler Miles, 10251005, Last Modified 03-Oct-2021, Loads Game Scene when Start Button Pressed
+/*
+Full Name:        Tyler Miles
+Student ID:       101251005
+File:             StartButtonBehaviour.cs
+Description:      This is the start button behaviour script that loads the game scene
+Revision history: added sound effects
+*/
 public class StartButtonBehaviour : MonoBehaviour
 {
 

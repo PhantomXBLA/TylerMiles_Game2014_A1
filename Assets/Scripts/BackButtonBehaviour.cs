@@ -3,7 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-//Back Button, Tyler Miles, 10251005, Last Modified 03-Oct-2021, Loads Start Scene When Pressed
+/*
+Full Name:        Tyler Miles
+Student ID:       101251005
+File:             BackButtonBehaviour.cs
+Description:      This is the back button, when the button is pressed it plays the SFX and loads the main menu.
+Revision history: Added sound fx
+*/
+
 public class BackButtonBehaviour : MonoBehaviour
 {
 

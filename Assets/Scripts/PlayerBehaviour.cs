@@ -5,6 +5,14 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
+/*
+Full Name:        Tyler Miles
+Student ID:       101251005
+File:             PlayerBehaviour.cs
+Description:      This is the player behaviour script that allows the player to jump via swipe up, slide via swipe down, die, game over, update the scoreUI, update the livesUI, tell the animator what animations to do, etc
+Revision history: allowed the player to jump via swipe up, slide via swipe down, die, game over, update the scoreUI, update the livesUI, tell the animator what animations to do, etc
+*/
+
 public class PlayerBehaviour : MonoBehaviour
 {
     Touch touch;

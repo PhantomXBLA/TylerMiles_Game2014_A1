@@ -2,6 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+Full Name:        Tyler Miles
+Student ID:       101251005
+File:             BatBehaviour.cs
+Description:      This is the bat behaviour script that moves the bat from right to left, and up and down, will despawn the bat once it goes off screen.
+Revision history: Allowed the bat to move from right to left then later added ability to move up and down.
+*/
+
 public class BatBehaviour : MonoBehaviour
 {
     public GameObject bat;
@@ -41,6 +49,7 @@ public class BatBehaviour : MonoBehaviour
             _Reset();
         }
 
+        //check top boundary
         if (transform.position.y >= verticalBoundaryTop)
         {
             direction = 1.0f;

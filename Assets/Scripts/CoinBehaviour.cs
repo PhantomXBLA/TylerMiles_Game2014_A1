@@ -2,6 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+Full Name:        Tyler Miles
+Student ID:       101251005
+File:             CoinBehaviour.cs
+Description:      This is the coin behaviour script that allows the coin to move from right to left and despawns it when it goes off screen.
+Revision history: added the ability for the coin to move from right to left and despawns it when it goes off screen.
+*/
+
 public class CoinBehaviour : MonoBehaviour
 {
     public float horizontalSpeed;

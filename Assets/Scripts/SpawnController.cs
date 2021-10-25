@@ -2,6 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+Full Name:        Tyler Miles
+Student ID:       101251005
+File:             SpawnController.cs
+Description:      This is the object that is responsible for spawning in enemies and power ups at random intervals within a range
+Revision history: had the object spawn enemies with a range of different times, then added the coin to those spawning intervals.
+*/
+
 public class SpawnController : MonoBehaviour
 {
     public GameObject Wolf;

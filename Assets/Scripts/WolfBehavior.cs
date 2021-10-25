@@ -2,6 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+Full Name:        Tyler Miles
+Student ID:       101251005
+File:             WolfBehaviour.cs
+Description:      This is the wolf behaviour script that moves the wolf from right to left and will despawn the wolf once it goes off screen.
+Revision history: Allowed the bat to move from right to left then later added ability to increase speed the closer it gets to player.
+*/
+
 public class WolfBehavior : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -11,11 +19,10 @@ public class WolfBehavior : MonoBehaviour
     public float horizontalBoundary;
 
     public GameObject wolf;
-    public float tempSpeed;
 
     void Start()
     {
-        horizontalSpeed = tempSpeed;
+
     }
 
     void Update()
@@ -32,7 +39,6 @@ public class WolfBehavior : MonoBehaviour
 
     private void _Reset()
     {
-        tempSpeed = horizontalSpeed;
         Destroy(wolf);
     }
 

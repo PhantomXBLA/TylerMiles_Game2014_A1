@@ -2,6 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+Full Name:        Tyler Miles
+Student ID:       101251005
+File:             BackgroundController.cs
+Description:      This is the background controller script that moves the background and constantly increases speed based on delta time, resets when hitting the boundary.
+Revision history: Created the scrolling background, then added the ability for the background to increase speed over time.
+*/
 public class BackgroundController : MonoBehaviour
 {
 

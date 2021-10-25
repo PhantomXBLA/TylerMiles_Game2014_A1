@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-//GameOverButton, Tyler Miles, 10251005, Last Modified 03-Oct-2021, Loads Game Over Scene when Pressed (demonstration only)
+/*
+Full Name:        Tyler Miles
+Student ID:       101251005
+File:             GameOverButtonPressed.cs
+Description:      This is an old button that triggered the game over state, not used anymore
+Revision history: set button to inactive, no longer in use, scared to delete
+*/
 public class GameOverButtonPressed : MonoBehaviour
 {
     public void OnGameOverButtonPressed()
